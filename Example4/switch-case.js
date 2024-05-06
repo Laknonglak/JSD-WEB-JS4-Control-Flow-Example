@@ -67,22 +67,22 @@
 
 // console.log(`Your grade is ${grade}.`);
 
-function calculateShippingCost(weight) {
-    switch (true) {
-      case weight <= 0:
-        return "Weight must be positive";
-      case weight <= 2:
-        return "Shipping cost is $5";
-      case weight <= 5:
-        return "Shipping cost is $10";
-      case weight <= 10:
-        return "Shipping cost is $15";
-      default:
-        return "Shipping cost is $20";
-    }
-  }
+// function calculateShippingCost(weight) {
+//     switch (true) {
+//       case weight <= 0:
+//         return "Weight must be positive";
+//       case weight <= 2:
+//         return "Shipping cost is $5";
+//       case weight <= 5:
+//         return "Shipping cost is $10";
+//       case weight <= 10:
+//         return "Shipping cost is $15";
+//       default:
+//         return "Shipping cost is $20";
+//     }
+//   }
   
-  console.log(calculateShippingCost(3)); // Outputs: Shipping cost is $10
+//   console.log(calculateShippingCost(3)); // Outputs: Shipping cost is $10
  
 //with weight won't not working as you expect becasue of it will looking for the exact number than range
 // function calculateShippingCost(weight) {
@@ -102,3 +102,69 @@ function calculateShippingCost(weight) {
   
 //   console.log(calculateShippingCost(3)); // Outputs: Shipping cost is $10
   
+
+//------------------------------------------------Inventory----------------------------------------------//
+
+// let products = {
+//   product_name: "Chocolate",
+//   quantity_in_stock: 7,
+//   unit_price: 5
+// };
+
+
+// switch (true) {
+//   case products.quantity_in_stock === 0:
+//       console.log(`${products.product_name} is out of stock. An urgent reorder is needed.`);
+//       break;
+//   case products.quantity_in_stock > 0 && products.quantity_in_stock <= 10:
+//       console.log(`${products.product_name} has low stock. Consider reordering soon.`);
+//       break;
+//   case products.quantity_in_stock > 10 && products.quantity_in_stock <= 50:
+//       console.log(`${products.product_name} is in stock. All is well.`);
+//       break;
+//   case products.quantity_in_stock > 50:
+//       console.log(`${products.product_name} is overstocked. Consider putting it on sale.`);
+//       break;
+//   default:
+//       console.log(`Unknown stock status for ${products.product_name}.`);
+//       break;
+// }
+
+
+//if else and switch make more sense
+// let products = {
+//   product_name: "Chocolate",
+//   quantity_in_stock: 7
+// };
+
+// // Pre-determine the category
+// let stockCategory;
+// if (products.quantity_in_stock === 0) {
+//   stockCategory = "outOfStock";
+// } else if (products.quantity_in_stock > 0 && products.quantity_in_stock <= 10) {
+//   stockCategory = "lowStock";
+// } else if (products.quantity_in_stock > 10 && products.quantity_in_stock <= 50) {
+//   stockCategory = "normalStock";
+// } else {
+//   stockCategory = "overstock";
+// }
+
+// // Now use switch to perform actions based on stock category
+// switch (stockCategory) {
+//   case "outOfStock":
+//       console.log(`${products.product_name} is out of stock. An urgent reorder is needed.`);
+//       break;
+//   case "lowStock":
+//       console.log(`${products.product_name} has low stock. Consider reordering soon.`);
+//       break;
+//   case "normalStock":
+//       console.log(`${products.product_name} is in stock. All is well.`);
+//       break;
+//   case "overstock":
+//       console.log(`${products.product_name} is overstocked. Consider putting it on sale.`);
+//       break;
+//   default:
+//       console.log(`Unknown stock status for ${products.product_name}.`);
+//       break;
+// }
+
